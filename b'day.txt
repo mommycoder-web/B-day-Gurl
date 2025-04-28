@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Birthday My Love</title>
+  <style>
+    body {
+      background: linear-gradient(135deg, #ffafbd, #ffc3a0);
+      height: 100vh;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      font-family: 'Poppins', sans-serif;
+      color: #fff;
+    }
+    #message {
+      display: none;
+      text-align: center;
+      font-size: 2em;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    }
+    input, button {
+      padding: 10px;
+      font-size: 1.2em;
+      border: none;
+      border-radius: 10px;
+      margin-top: 20px;
+      outline: none;
+    }
+    button {
+      background-color: #ff758c;
+      color: white;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    button:hover {
+      background-color: #ff6a7c;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Hey beautiful 💖</h1>
+  <p>Type your name to continue...</p>
+
+  <input type="text" id="nameInput" placeholder="Enter your name 💌">
+  <button id="submitButton">Submit</button>
+
+  <div id="message"></div>
+
+  <script>
+    document.getElementById('submitButton').addEventListener('click', function showMessage() {
+      var name = document.getElementById('nameInput').value;
+      if (name.trim() !== "") {
+        document.getElementById('message').style.display = 'block';
+        document.getElementById('message').innerHTML =
+          "🎂 Happy Birthday, " + name + "! 🎂<br><br>" +
+          "You are the light of my life, the smile to my face, and the beat of my heart. 💗<br>" +
+          "May your special day be as beautiful and amazing as you are! 🌸<br><br>" +
+          "Forever yours, 💕";
+
+        document.getElementById('nameInput').style.display = 'none';
+        document.getElementById('submitButton').style.display = 'none';
+        document.querySelector('p').style.display = 'none';
+        document.querySelector('h1').innerHTML = "For You, My Love 💝";
+      } else {
+        alert("Please enter your name, sweetie! 🥺");
+      }
+    });
+  </script>
+
+</body>
+</html>
